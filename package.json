@@ -19,7 +19,7 @@
     "test": "tests"
   },
   "scripts": {
-    "app": "nodemon src/app.js",
+    "app": "node src/app.js",
     "test": "./node_modules/mocha/bin/mocha tests --reporter mocha-junit-reporter"
   },
   "keywords": [],
