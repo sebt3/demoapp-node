@@ -4,6 +4,8 @@ CREATE DATABASE demo_node_app;
 -- create a user
 create user 'demo'@'%' identified by 'demo';
 grant ALL on demo_node_app.* to demo@'%';
+create user 'demo'@'localhost' identified by 'demo';
+grant ALL on demo_node_app.* to demo@'localhost';
 flush privileges;
 
 
