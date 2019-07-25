@@ -32,7 +32,7 @@ app.set('view engine', 'ejs');
 
 // middlewares
 app.use(morgan('dev'));
-app.use(myConnection(mysql, config.database, 'single'));
+app.use(myConnection(mysql, config.database, 'pool'));
 app.use(express.urlencoded({extended: false}));
 
 // routes
