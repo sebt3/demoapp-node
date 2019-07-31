@@ -24,6 +24,7 @@ app.set('version', '1.0.0');
 
 // importing routes
 const customerRoutes = require('./routes/customer');
+const apiRoutes = require('./routes/api');
 
 // settings
 app.set('port', process.env.PORT || 3000);
@@ -37,6 +38,7 @@ app.use(express.urlencoded({extended: false}));
 
 // routes
 app.use('/', customerRoutes);
+app.use('/api', apiRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
